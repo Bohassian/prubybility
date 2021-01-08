@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Ruby interface for probability distributions"
   s.authors     = ["Jacob Lee"]
   s.email       = 'jacob.nmi.lee@gmail.com'
-  s.files       = [""]
+  s.files       = ["lib/prubybility.rb"]
   s.homepage    =
     'https://rubygems.org/gems/prubybility'
   s.license       = 'GNU GPL'
