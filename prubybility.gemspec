@@ -9,5 +9,5 @@ Gem::Specification.new do |s|
   s.files       = ["lib/prubybility.rb"]
   s.homepage    =
     'https://rubygems.org/gems/prubybility'
-  s.license       = 'GNU GPL'
+  s.license       = 'GPL-3.0-only'
 end
