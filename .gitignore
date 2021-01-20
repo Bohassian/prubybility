@@ -1,1 +1,7 @@
 *.gem
+Gemfile.lock
+*~
+.bundle
+.rvmrc
+.DS_Store
+.env
