@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'bigdecimal'
+require 'bigdecimal/util'
 require 'prubybility/combinations'
 require 'prubybility/binomial'
 require 'prubybility/bernoulli'
