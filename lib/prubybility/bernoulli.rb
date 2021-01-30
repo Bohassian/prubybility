@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Prubybility
-  # A representation of the Binomial probability distribution.
+  # A representation of the Bernoulli probability distribution.
   #
   # See README for example usages.
   class Bernoulli < Binomial

@@ -21,7 +21,8 @@ Gem::Specification.new do |s|
     'lib/prubybility/binomial.rb',
     'lib/prubybility/bernoulli.rb',
     'lib/prubybility/combinations.rb',
-    'lib/prubybility/negative_binomial.rb'
+    'lib/prubybility/negative_binomial.rb',
+    'lib/prubybility/geometric.rb'
   ]
   s.homepage              = 'https://github.com/Bohassian/prubybility'
   s.license               = 'GPL-3.0-only'

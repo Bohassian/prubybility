@@ -11,11 +11,11 @@ module Prubybility
 
     alias mean expected_value
 
-    def initialize(suc, theta)
-      @k = suc
+    def initialize(fixed_successes, theta)
+      @k = fixed_successes
       @theta = theta.to_d
-      @expected_value = suc / @theta
-      @variance = suc / @theta * (1 / @theta - 1)
+      @expected_value = @k / @theta
+      @variance = @k / @theta * (1 / @theta - 1)
     end
 
     def p(var)
