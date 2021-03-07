@@ -10,7 +10,7 @@ module Prubybility
     end
 
     def p(var)
-      return if var < 1 && !var.is_a? Integer
+      # return if var < 1 && !var.is_a? Integer
 
       (theta) * (1 - theta)**(var - 1)
     end

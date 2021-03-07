@@ -5,7 +5,7 @@ module Prubybility
   #
   # See README for example usages.
   class Binomial
-    include Prubybility::Combinations
+    # include Prubybility::Combinations
 
     attr_reader :n, :theta, :expected_value, :variance
 
@@ -19,10 +19,15 @@ module Prubybility
     end
 
     def p(var)
-      choose(n, var) * (theta**var) * ((1 - theta)**(n - var))
+      choose(var) * (theta**var) * ((1 - theta)**(n - var))
     end
 
     private
+
+    def choose(var)
+      return 0.0 if var < 0
+      Prubybility::Combinations.choose(n, var)
+    end
 
     attr_writer :n, :theta, :expected_value, :variance
   end

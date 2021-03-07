@@ -11,19 +11,20 @@ Gem::Specification.new do |s|
   probability distributions'
   s.authors               = ['Jacob Lee']
   s.email                 = 'jacob.nmi.lee@gmail.com'
-  s.files                 = [
-    '.gitignore',
-    'LICENSE',
-    'Rakefile',
-    'Gemfile',
-    'prubybility.gemspec',
-    'lib/prubybility.rb',
-    'lib/prubybility/binomial.rb',
-    'lib/prubybility/bernoulli.rb',
-    'lib/prubybility/combinations.rb',
-    'lib/prubybility/negative_binomial.rb',
-    'lib/prubybility/geometric.rb'
-  ]
+  s.files                 = Dir['lib/**/*', 'src/**/*.rs', 'Cargo.toml', 'LICENSE', 'prubybility.gemspec', '.gitignore', 'Gemfile', 'Rakefile']
+  # s.files                 = [
+  #   '.gitignore',
+  #   'LICENSE',
+  #   'Rakefile',
+  #   'Gemfile',
+  #   'prubybility.gemspec',
+  #   'lib/prubybility.rb',
+  #   'lib/prubybility/binomial.rb',
+  #   'lib/prubybility/bernoulli.rb',
+  #   'lib/prubybility/combinations.rb',
+  #   'lib/prubybility/negative_binomial.rb',
+  #   'lib/prubybility/geometric.rb'
+  # ]
   s.homepage              = 'https://github.com/Bohassian/prubybility'
   s.license               = 'GPL-3.0-only'
   s.platform              = Gem::Platform::RUBY

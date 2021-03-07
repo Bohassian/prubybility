@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+require 'fiddle'
+require 'fiddle/import'
 
 module Prubybility
   # This module provides a way to calculate combinations to be
@@ -8,18 +10,16 @@ module Prubybility
   # context and may return unexpected answers if used in such
   # manner.
   module Combinations
-    class NumberOutOfRangeError < StandardError; end
+    extend Fiddle::Importer
+    dlload File.expand_path('libprubybility.so', __dir__)
+    extern 'void free_binom(char*)'
+    extern 'char* binom(long, long)'
 
-    class WrongTypeError < StandardError; end
-
-    private
-
-    def choose(num, var)
-      raise WrongTypeError unless num.is_a? Integer
-      raise NumberOutOfRangeError if var.negative?
-      raise NumberOutOfRangeError if var > num
-
-      num.downto(num - var + 1).inject(:*) / (1..var).inject(:*)
+    def self.choose(x, y)
+      ptr = binom(x, y)
+      int = ptr.to_s.to_i
+      free_binom(ptr)
+      int
     end
   end
 end

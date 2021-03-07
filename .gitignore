@@ -5,3 +5,9 @@ Gemfile.lock
 .rvmrc
 .DS_Store
 .env
+
+
+# Added by cargo
+
+/target
+Cargo.lock
