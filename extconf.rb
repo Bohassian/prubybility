@@ -2,4 +2,4 @@ abort "Rust compiler required (https://www.rust-lang.org/)" if `which rustc`.emp
 
 require 'mkmf'
 create_makefile '/'
-`rake build`
+system("rake build")
