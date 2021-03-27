@@ -5,8 +5,6 @@ module Prubybility
   #
   # See README for example usages.
   class Binomial
-    # include Prubybility::Combinations
-
     attr_reader :n, :theta, :expected_value, :variance
 
     alias mean expected_value
@@ -25,7 +23,6 @@ module Prubybility
     private
 
     def choose(var)
-      return 0.0 if var < 0
       Prubybility::Combinations.choose(n, var)
     end
 
