@@ -16,10 +16,22 @@ module Prubybility
     extern 'char* binom(long, long)'
 
     def self.choose(x, y)
+      return unless valid_input?(x, y)
+
       ptr = binom(x, y)
       int = ptr.to_s.to_i
       free_binom(ptr)
       int
+    end
+
+    private
+
+    def self.valid_input?(x, y)
+      return false unless x.is_a?(Integer) && y.is_a?(Integer)
+      return false unless x > 0 && y > 0
+      return false unless x < 2**64 && y < 2**64
+      return false unless x >= y
+      true
     end
   end
 end
