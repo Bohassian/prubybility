@@ -6,6 +6,7 @@ Gemfile.lock
 .DS_Store
 .env
 
+!.tool-versions
 
 # Added by cargo
 
