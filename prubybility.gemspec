@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   probability distributions'
   s.authors               = ['Jacob Lee']
   s.email                 = 'jacob.nmi.lee@gmail.com'
-  s.files                 = Dir['lib/**/*', 'src/**/*.rs', 'Cargo.toml', 'LICENSE', 'prubybility.gemspec', '.gitignore', 'Gemfile', 'Rakefile']
+  s.files                 = Dir['lib/**/*', 'src/**/*.rs', 'Cargo.toml', 'LICENSE', 'prubybility.gemspec', '.gitignore', 'Gemfile', 'Rakefile', '.tool-versions']
   
   s.extensions            = %w(extconf.rb)
 
